@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { Leaf, Map, PlusCircle, Home, LogOut, User as UserIcon, Menu, X, ChevronDown } from 'lucide-react';
+import { Leaf, Map, PlusCircle, Home, LogOut, User as UserIcon, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);

@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import IssuesList from './pages/IssuesList';
 import ReportIssue from './pages/ReportIssue';
 import IssueDetails from './pages/IssueDetails';
+import Profile from './pages/Profile';
 
 // Admin Imports
 import AdminRoute from './components/AdminRoute';
@@ -37,6 +38,7 @@ const AppLayout = () => {
           <Route path="/issues" element={<IssuesList />} />
           <Route path="/report" element={<ReportIssue />} />
           <Route path="/issues/:id" element={<IssueDetails />} />
+          <Route path="/profile" element={<Profile />} />
 
           {/* Admin Protected Routes */}
           <Route path="/admin" element={<AdminRoute />}>

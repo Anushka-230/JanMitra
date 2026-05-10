@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Search, Shield, ShieldAlert, UserCheck, Trash2, Loader2, AlertTriangle, X } from 'lucide-react';
 import api from '../../services/api';
 import { AuthContext } from '../../context/AuthContext';
@@ -107,10 +107,6 @@ const AdminUsers = () => {
     const [deleteLoading, setDeleteLoading] = useState(false);
     const [toast, setToast] = useState(null);
 
-    useEffect(() => {
-        fetchUsers();
-    }, []);
-
     const fetchUsers = async () => {
         setLoading(true);
         try {
@@ -118,10 +114,15 @@ const AdminUsers = () => {
             setUsers(res.data.users || []);
         } catch (error) {
             console.error("Error fetching users:", error);
+            setToast('Failed to load users. Please check your connection.');
         } finally {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
 
     const handleRoleChange = async (id, newRole) => {
         try {

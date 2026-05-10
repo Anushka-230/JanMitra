@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, Mail, Phone, MapPin, Code2, Globe } from 'lucide-react';
+import { Leaf, Mail, Phone, MapPin } from 'lucide-react';
 
 const FooterHeading = ({ children }) => (
     <h3 className="text-sm font-bold text-slate-800 uppercase tracking-widest mb-4">{children}</h3>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, MoreVertical, Edit2, Trash2, MapPin, CheckCircle, Clock, AlertCircle, Loader2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, Edit2, MapPin, Loader2 } from 'lucide-react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
 
@@ -12,10 +12,6 @@ const AdminIssues = () => {
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState('');
     const [filters, setFilters] = useState({ category: 'All Categories', status: 'All Status', priority: 'All Priority' });
-
-    useEffect(() => {
-        fetchIssues();
-    }, [filters]);
 
     const fetchIssues = async () => {
         setLoading(true);
@@ -39,6 +35,10 @@ const AdminIssues = () => {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        fetchIssues();
+    }, [filters]);
 
     const handleStatusChange = async (id, newStatus) => {
         try {

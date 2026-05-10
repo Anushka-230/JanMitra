@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { LayoutDashboard, AlertCircle, Users, Map as MapIcon, Settings, LogOut, ChevronLeft, Menu, Bell, User } from 'lucide-react';

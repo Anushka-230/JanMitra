@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
     MapPin, AlertCircle, CheckCircle, ArrowRight,
     Camera, RefreshCcw, ShieldCheck, ChevronRight,
-    Users, Search, LocateFixed, TrendingUp
+    Users, Search, LocateFixed
 } from 'lucide-react';
 import api from '../services/api';
 

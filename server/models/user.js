@@ -14,7 +14,7 @@ const userSchema = new Schema({
         enum: ['citizen', 'admin'],
         default: 'citizen'
     },
-});
+}, { timestamps: true });
 
 userSchema.plugin(passportLocalMongoose);
 

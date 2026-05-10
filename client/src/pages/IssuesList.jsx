@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Map, { Marker, Popup, NavigationControl, FullscreenControl } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { MapPin, Filter, Search, ChevronRight, Clock, AlertTriangle, CheckCircle2, Loader2 } from 'lucide-react';
+import { MapPin, Search, ChevronRight, Clock, AlertTriangle, Loader2 } from 'lucide-react';
 import api from '../services/api';
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
