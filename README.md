@@ -6,7 +6,7 @@
 
 ---
 
-Check it out here: https://janmitra-v2w3.onrender.com
+Check it out here: https://jan-mitra-three.vercel.app/
 
 ## 📖 Project Overview
 
